@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FilmenRegistreringModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="visningsID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Auditorium" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Seats" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FilmenRegistration">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SocialSecurityNR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="visningar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movieDBId" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="salong" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tidpunkt" Type="DateTime" Precision="3" />
+    <Property Name="movieName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotalSeats" Type="Int32" />
+    <Property Name="ReservedSeats" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="FilmenRegistreringEntities22" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Booking" EntityType="Self.Booking" />
+    <EntitySet Name="FilmenRegistration" EntityType="Self.FilmenRegistration" />
+    <EntitySet Name="visningar" EntityType="Self.visningar" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,50 @@
+.container {
+  background-color: #008080;
+}
+
+.titleBar {
+  background-color: #bebbbf;
+  border-style: groove;
+  border-color: black;
+  border-width: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  display: block;
+  color: white;
+  padding-left: 20px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.PageHeading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black !important;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+}
